@@ -6,13 +6,13 @@ pipeline {
              steps {
                                   script{
                                          //sh 'cp -r ../shared-library@2/target .'
-                                         sh 'docker build . -t varunchughtech/varun-testone:four'
-                                           withCredentials([gitUsernamePassword(credentialsId: 'Jenkins_Private-Key', gitToolName: 'Default')]) {
+                                         sh 'docker build . -t varunchughtech/varun-testone:five'
+                                           // withCredentials([gitUsernamePassword(credentialsId: 'Jenkins_Private-Key', gitToolName: 'Default')]) {
     // some block
-}
+// } 
 
                                               sh 'docker login -u varunchughtech -p Reetchugh@2015   '
-                                              sh 'docker push varunchughtech/varun-testone:four'
+                                              sh 'docker push varunchughtech/varun-testone:five'
                                           //}
                                   }
         }
